@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #121212;
+    font-family: 'Raleway', sans-serif;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.banner{
+    display: flex;
+    height: 100vh;
+}
+.banner-left{
+    flex: 1;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.banner-right{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-title{
+    font-size: 60px;
+    white-space: nowrap;
+    position: relative;
+    color: transparent;
+}
+.banner-title::before{
+    content: 'Programming hero';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #22bedd;
+    animation: typing 3s linear infinite;
+}
+.banner-text{
+    line-height: 2;
+    margin: 20px 0;
+}
+.love-button{
+    outline: 0;
+    font-size: 18px;
+    padding: 10px 30px;
+    background-color: #22bedd;
+    color: #fff;
+    border: 4px solid #22bedd;
+    cursor: pointer;
+    transition: .3s linear;
+}
+.love-button:hover{
+    background-color: transparent;
+    color: #22bedd;
+}
+
+@keyframes typing {
+    0% {
+        content: 'P|';
+    }
+
+    4% {
+        content: 'Pr|';
+    }
+
+    8% {
+        content: 'Pro|';
+    }
+
+    12% {
+        content: 'Prog|';
+    }
+
+    16% {
+        content: 'Progr|';
+    }
+
+    20% {
+        content: 'Progra|';
+    }
+
+    24% {
+        content: 'Program|';
+    }
+
+    28% {
+        content: 'Programm|';
+    }
+
+    32% {
+        content: 'Programmi|';
+    }
+
+    36% {
+        content: 'Programmin|';
+    }
+
+    40% {
+        content: 'Programming|';
+    }
+
+    44% {
+        content: 'Programming |';
+    }
+
+    48% {
+        content: 'Programming h|';
+    }
+
+    52% {
+        content: 'Programming he|';
+    }
+
+    56% {
+        content: 'Programming her|';
+    }
+
+    60% {
+        content: 'Programming hero|';
+    }
+
+    64%,
+    83% {
+        content: 'Programming hero|';
+    }
+
+    84% {
+        content: 'Programming her|';
+    }
+
+    85% {
+        content: 'Programming he|';
+    }
+
+    86% {
+        content: 'Programming h|';
+    }
+
+    87% {
+        content: 'Programming |';
+    }
+
+    88% {
+        content: 'Programming|';
+    }
+
+    89% {
+        content: 'Programmin|';
+    }
+
+    90% {
+        content: 'Programmi|';
+    }
+
+    91% {
+        content: 'Programm|';
+    }
+
+    92% {
+        content: 'Program|';
+    }
+
+    93% {
+        content: 'Progra|';
+    }
+
+    94% {
+        content: 'Progr|';
+    }
+
+    95% {
+        content: 'Prog|';
+    }
+
+    96% {
+        content: 'Pro|';
+    }
+
+    97% {
+        content: 'Pr|';
+    }
+
+    98% {
+        content: 'P|';
+    }
+
+    99% {
+        content: '|';
+    }
+
+    100% {
+        content: '|';
+    }
+}
+.banner-right img{
+    border: 4px solid #22bedd;
+}
+.section-title{
+    text-align: center;
+}
+.section-title h1{
+    color: #22bedd;
+    font-size: 40px;
+    margin: 50px 0;
+    border-left: 3px solid #22bedd;
+    border-right: 3px solid #22bedd;
+    display: inline-block;
+    padding:0 10px;
+    line-height: .8;
+}
+.gallery{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.photo{
+    height: 280px;
+    width: 280px;
+    position: relative;
+    overflow: hidden;
+}
+.photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.border{
+    background-color: #fff;
+    position: absolute;
+    transition: .7s ease-in-out;
+}
+.border.top, .border.bottom{
+    height: 4px;
+    width: 270px;
+}
+.border.left, .border.right{
+    height: 270px;
+    width: 4px;
+}
+.border.top{
+    top: 5px;
+    right: 100%;
+}
+.border.bottom{
+    bottom: 5px;
+    left: 100%;
+}
+.border.left{
+    left: 5px;
+    top: 100%;
+}
+.border.right{
+    right: 5px;
+    bottom: 100%;
+}
+.photo:hover .border.top{
+    right: 5px;
+}
+.photo:hover .border.bottom{
+    left: 5px;
+}
+.photo:hover .border.left{
+    top: 5px;
+}
+.photo:hover .border.right{
+    bottom: 5px;
+}
+
+.photo-content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    padding-left: 30px;
+    bottom: 0;
+    left: 0;
+    transform: translateY(400px);
+    transition: .3s ease-out;
+}
+.photo:hover .photo-content{
+    transform: translateY(200px);
+}
+.photo::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transition: .3s linear;
+}
+.photo:hover::before{
+    opacity: 1;
+}
